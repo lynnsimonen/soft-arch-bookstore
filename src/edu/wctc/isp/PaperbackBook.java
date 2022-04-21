@@ -1,10 +1,12 @@
 package edu.wctc.isp;
 
+import edu.wctc.isp.solution.part1.Book;
+
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class PaperbackBook implements Product {
+public class PaperbackBook implements BookType {
 
     private String title;
     private String isbn;
@@ -23,12 +25,6 @@ public class PaperbackBook implements Product {
         this.author = author;
         this.pageCount = pageCount;
     }
-
-    @Override
-    public String getArtist() {
-        return "";
-    }
-
     @Override
     public String getAuthor() {
         return author;
@@ -52,11 +48,6 @@ public class PaperbackBook implements Product {
     @Override
     public int getPages() {
         return pageCount;
-    }
-
-    @Override
-    public Duration getPlayingTime() {
-        return null;
     }
 
     @Override
